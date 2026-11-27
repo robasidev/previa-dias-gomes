@@ -178,8 +178,8 @@ section { padding: clamp(72px, 10vw, 120px) 0; }
 /* ---------- equipe */
 .equipe .cab { text-align: center; max-width: 720px; margin: 0 auto 52px; }
 .equipe .cab .lead { margin: 16px auto 0; }
-.pessoas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.pessoa { text-align: center; display: grid; justify-items: center; align-content: start; gap: 4px; }
+.pessoas { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
+.pessoa { flex: 0 1 200px; min-width: 0; text-align: center; display: grid; justify-items: center; align-content: start; gap: 4px; }
 .pessoa .foto { width: min(190px, 100%); aspect-ratio: 1; border-radius: 50%; overflow: hidden; position: relative; margin-bottom: 16px; background: var(--turquesa-claro); }
 .pessoa .foto img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
 .pessoa .foto::after { content: ""; position: absolute; inset: 0; border-radius: 50%; box-shadow: inset 0 0 0 5px #fff, 0 0 0 2px var(--rosa); }
@@ -188,7 +188,7 @@ section { padding: clamp(72px, 10vw, 120px) 0; }
 .pessoa .papel { font-size: .85rem; font-weight: 600; color: var(--ameixa); }
 .pessoa:nth-child(even) .papel { color: var(--petroleo); }
 .pessoa p { font-size: .86rem; color: var(--texto); max-width: 24ch; }
-@media (max-width: 900px) { .pessoas { grid-template-columns: repeat(2, 1fr); gap: 36px 20px; } }
+@media (max-width: 900px) { .pessoas { gap: 36px 20px; } .pessoa { flex-basis: calc(50% - 10px); } }
 
 /* ---------- estrutura */
 .estrutura { background: var(--turquesa-claro); }
@@ -416,6 +416,7 @@ footer a:hover { color: #fff; }
     <div class="pessoas">
       <div class="pessoa aparece"><div class="foto"><img src="assets/juliana-fisioterapeuta-limao.jpg" alt="Juliana, fisioterapeuta e fundadora" width="240" height="359"></div><h3>Juliana</h3><span class="papel">Fisioterapeuta e fundadora</span><p>Ortopedia e Traumatologia pela Santa Casa de SP · 14 anos de experiência · Diploma de Reconhecimento aos Profissionais da Saúde pela Alesp (2026)</p></div>
       <div class="pessoa aparece"><div class="foto"><img src="assets/gabriela-fisioterapeuta-limao.jpg" alt="Gabriela, fisioterapeuta" width="240" height="426"></div><h3>Gabriela</h3><span class="papel">Fisioterapeuta</span><p>UNIFESP · mestrado pela UNICAMP · especialista em Gerontologia</p></div>
+      <div class="pessoa aparece"><div class="foto"><img src="assets/estefani-fisioterapeuta-limao.jpg" alt="Estefani, fisioterapeuta do atendimento domiciliar" width="400" height="500"></div><h3>Estefani</h3><span class="papel">Fisioterapeuta</span><p>Dedicada ao atendimento em casa</p></div>
       <div class="pessoa aparece"><div class="foto"><img src="assets/michael-personal-trainer-limao.jpg" alt="Michael, personal trainer e cofundador" width="240" height="425"></div><h3>Michael</h3><span class="papel">Personal trainer e cofundador</span><p>Educação Física · Bombeiro Militar · 2º lugar em Atividade Física no Guia Zona Norte Awards (2025)</p></div>
       <div class="pessoa aparece"><div class="foto"><img src="assets/thalita-acupunturista-limao.jpg" alt="Thalita, acupunturista" width="240" height="320"></div><h3>Thalita</h3><span class="papel">Acupunturista</span><p>Pós-graduada em Medicina Tradicional Chinesa · 10 anos de experiência</p></div>
     </div>
